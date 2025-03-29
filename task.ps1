@@ -1,4 +1,4 @@
-$resourceGroupName = "mate-azure-task-2"
+$resourceGroupName = "mate-azure-task-5"
 $disks = Get-AzDisk -ResourceGroupName $resourceGroupName
 $unattachedDisks = $disks | Where-Object {$_.ManagedBy -eq $null}
 $unattachedDisksJson = $unattachedDisks | Select-Object Name, Location, DiskState, ManagedBy | ConvertTo-Json -Depth 3
